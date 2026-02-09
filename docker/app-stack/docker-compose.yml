@@ -12,13 +12,10 @@ services:
 
     restart: unless-stopped
 
-  app:
-    image: python:3.12-alpine
+    app:
+    build:
+      context: ./app
     container_name: app
-    working_dir: /app
-    volumes:
-      - ./app:/app:ro
-    command: python /app/app.py
     restart: unless-stopped
 
     healthcheck:
@@ -27,7 +24,8 @@ services:
       timeout: 3s
       retries: 3
 
-  db:
+
+ db:
     image: postgres:16-alpine
     container_name: db
     environment:
