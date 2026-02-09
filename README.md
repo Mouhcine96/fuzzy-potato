@@ -1,5 +1,5 @@
 # fuzzy-potato
-Homelab, learining, Devops
+Homelab, learning, Devops
 
 # Homelab DevOps Journey
 
